@@ -86,6 +86,7 @@ if ! command -v ${picker} &> /dev/null; then
   exit 1
 fi
 
+# ZIDE_USE_YAZI_CONFIG="false";
 envs="EDITOR='zide-edit'"
 if [[ "${picker}" == "yazi" && "${ZIDE_USE_YAZI_CONFIG}" != "false" ]]; then
   yaziConfigDir="${ZIDE_USE_YAZI_CONFIG:-${ZIDE_DIR}/yazi}"
