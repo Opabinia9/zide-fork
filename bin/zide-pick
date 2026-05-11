@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-
+if [ -z "${ZIDE_DIR+x}" ]; then
+  ZIDE_DIR="$(dirname -- "${BASH_SOURCE[0]}")/../";
+fi
 source "${ZIDE_DIR}/bin/lib/findLayoutConfig.sh"
 
 read -r -d '' HELP_TEXT << EOF
